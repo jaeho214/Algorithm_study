@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 public class BOJ_10164_격자상의경로 {
     private static int dp[][];
     private static int a[][];
-    private static int n,m,o, cnt=0;
+    private static int n,m,o;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
