@@ -1,4 +1,4 @@
-package bfs;
+package search;
 
 import java.io.*;
 import java.util.LinkedList;
