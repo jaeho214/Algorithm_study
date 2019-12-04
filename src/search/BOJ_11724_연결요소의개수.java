@@ -1,4 +1,4 @@
-package bfs;
+package search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,18 +17,24 @@ public class BOJ_11724_연결요소의개수 {
         for(int i=1;i<=n;i++) {
             if (!visited[i]) {
                 cnt++;
-                solve(i);
+                //bfs(i);
+                dfs(i);
             }
         }
         output(cnt);
 
     }
 
-    private static void output(int cnt) {
-        System.out.println(cnt);
+    private static void dfs(int num){
+        visited[num] = true;
+        for(int i=1;i<=n;i++){
+            if(a[num][i] == 1 && !visited[i]){
+                dfs(i);
+            }
+        }
     }
 
-    private static void solve(int num) {
+    private static void bfs(int num) {
         Queue<Integer> q = new LinkedList<>();
         q.add(num);
         while(!q.isEmpty()){
@@ -63,5 +69,9 @@ public class BOJ_11724_연결요소의개수 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void output(int cnt) {
+        System.out.println(cnt);
     }
 }

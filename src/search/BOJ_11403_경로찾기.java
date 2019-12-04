@@ -1,4 +1,4 @@
-package bfs;
+package search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,15 +11,30 @@ public class BOJ_11403_경로찾기 {
     private static boolean visited[];
     private static int result[][];
     private static int a[][];
-    private static int n;
+    private static int n, number;
     public static void main(String[] args) {
         int n = input();
-        for(int i=1;i<=n;i++)
-            solve(i);
+        for(int i=1;i<=n;i++) {
+            visited = new boolean[n + 1];
+            number = i;
+            dfs(i);
+
+        }
         output();
     }
 
-    private static void solve(int num) {
+    private static void dfs(int x){
+        for(int i=1;i<=n;i++){
+            if(a[x][i] == 1 && !visited[i]){
+                visited[i] = true;
+                result[x][i] = 1;
+                result[number][i] = 1;
+                dfs(i);
+            }
+        }
+    }
+
+    private static void bfs(int num) {
         Queue<Integer> q = new LinkedList<>();
         //visited를 계속 갱신하면서 해줄 생각을 못함
         visited = new boolean[n+1];

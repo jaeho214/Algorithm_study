@@ -1,4 +1,4 @@
-package bfs;
+package search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,15 +36,33 @@ public class BOJ_1012_유기농배추 {
             for(int j=0;j<n;j++){
                 for(int l=0;l<m;l++){
                     //이미 확인한 경로를 넘어가는 조건은 깜빡했었음 !visited[j][l]
-                    if(map[j][l] == 1 && !visited[j][l])
-                        solve(j,l);
+                    if(map[j][l] == 1 && !visited[j][l]){
+                        dfs(j,l);
+                        count++;
+                    }
+
+                        //bfs(j,l);
                 }
             }
             System.out.println(count);
         }
     }
 
-    private static void solve(int x, int y) {
+    private static void dfs(int x, int y){
+        visited[x][y] = true;
+        for(int i=0;i<4;i++){
+            int nextX = x + dx[i];
+            int nextY = y + dy[i];
+
+            if(nextX >= 0 && nextX < n && nextY >= 0 && nextY < m){
+                if(map[nextX][nextY]==1 && !visited[nextX][nextY]){
+                    dfs(nextX, nextY);
+                }
+            }
+        }
+    }
+
+    private static void bfs(int x, int y) {
         Queue<Integer> qx = new LinkedList<>();
         Queue<Integer> qy = new LinkedList<>();
         qx.add(x);
@@ -68,6 +86,5 @@ public class BOJ_1012_유기농배추 {
             }
         }
         count++;
-
     }
 }
