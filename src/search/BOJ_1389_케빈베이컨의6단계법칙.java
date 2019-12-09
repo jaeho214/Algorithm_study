@@ -11,6 +11,7 @@ import java.util.StringTokenizer;
  */
 public class BOJ_1389_케빈베이컨의6단계법칙 {
 
+    //현재 노드와 목적지까지의 거리 클래스
     public static class Node{
         int x;
         int dist;
@@ -97,8 +98,10 @@ public class BOJ_1389_케빈베이컨의6단계법칙 {
             int dist = q.poll().dist;
             for(int i=1;i<=n;i++){
                 if(relation[num][i] == 1 && !visited[i]){
+                    //현재 정점과 인접한 정점들을 찾아서 dist + 1로 값 넣어줌
                     q.add(new Node(i, dist + 1));
                     visited[i] = true;
+                    //현재 정점과 인접한 정점들까지의 거리를 res에 저장
                     res[i] += dist+1;
                 }
             }
