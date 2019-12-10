@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 /*
  * http://blog.naver.com/PostView.nhn?blogId=suntouch&logNo=221604734962&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView
  */
-public class BOJ_13460_구슬탈출2 {
+public class BOJ_13460_구슬탈출2_dfs {
 
     private static int dx[] = {1,0,-1,0};
     private static int dy[] = {0,1,0,-1};
