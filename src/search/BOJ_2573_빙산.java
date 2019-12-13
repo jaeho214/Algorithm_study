@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * 2. 덩어리의 개수에 따라 결과를 내거나 빙산을 녹인다
  * 3. 빙산을 녹이고 나서 다시 덩어리 개수를 센다.
  */
-public class BOJ_2573 {
+public class BOJ_2573_빙산 {
     static int dx[] = {-1,0,1,0};
     static int dy[] = {0,-1,0,1};
     static int[][] arr, cnt;
