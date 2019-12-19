@@ -7,7 +7,6 @@ import java.util.StringTokenizer;
 /*
  * https://bcp0109.tistory.com/32
  * 플래그를 두개를 써줬어야 했다. 플래그를 하나만 써주고 다 돌아서 시간초과가 났다.
- * 
  */
 public class BOJ_9466_텀프로젝트 {
     static int t,n, res, arr[];
