@@ -2,12 +2,12 @@ package codility.lesson6;
 
 import java.util.Arrays;
 
-public class Triplet {
+public class MaxProductOfThree {
 
     public static void main(String[] args) {
-        Triplet triplet = new Triplet();
+        MaxProductOfThree maxProductOfThree = new MaxProductOfThree();
         int[] arr = {-3,1,2,-2,5,6};
-        System.out.println(triplet.solution(arr));
+        System.out.println(maxProductOfThree.solution(arr));
     }
 
 
