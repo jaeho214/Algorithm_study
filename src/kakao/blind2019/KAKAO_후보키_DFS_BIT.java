@@ -27,8 +27,8 @@ public class KAKAO_후보키_DFS_BIT {
             while(iterator.hasNext()){
                 int next = iterator.next();
                 //포함하는게 있다면
-                //즉, v는 1000이고 next 가 1001 이면 첫번째 자리가 겹치므로 불가
-                //(next&v) == v 는 겹치는 비트가 하나도 없을 때 성립
+                //즉, v는 1000이고 next 가 1001 이면 네번째 자리가 다르므로 불가
+                //(next&v) == v 는 다른 비트가 하나도 없을 때 성립
                 if((next&v) == v)
                     iterator.remove();
             }
