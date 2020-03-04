@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 /*
- * https://geekhub.tistory.com/57
+ * https://mygumi.tistory.com/361
  * 비트마스크를 이제 시작했다
  * 방문한 도시를 가지고 비트마스킹을 사용했다
  * 접근은 비슷하게 했지만 풀지 못했다
