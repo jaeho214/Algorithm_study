@@ -39,17 +39,4 @@ public class Level3_종이접기 {
 
     }
 
-    public String reverse(String str){
-        char[] chars = str.toCharArray();
-        for(int i=0;i<chars.length;i++){
-            if(chars[i] == '0')
-                chars[i] = '1';
-            else
-                chars[i] = '0';
-        }
-        StringBuilder sb = new StringBuilder();
-        for(char c : chars)
-            sb.append(c);
-        return sb.toString();
-    }
 }
