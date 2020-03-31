@@ -31,7 +31,7 @@ public class BOJ_1120_문자열 {
             if(result > min) {
                 result = min;
             }
-            A = " " + A.substring(0, A.length());
+            A = " " + A;
         }
 
         System.out.println(result);
