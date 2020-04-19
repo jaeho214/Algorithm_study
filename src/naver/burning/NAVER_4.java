@@ -1,4 +1,4 @@
-package naver;
+package naver.burning;
 
 public class NAVER_4 {
     public static void main(String[] args) {

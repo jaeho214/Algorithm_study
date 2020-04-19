@@ -1,4 +1,4 @@
-package naver;
+package naver.burning;
 
 import java.util.ArrayList;
 import java.util.List;
