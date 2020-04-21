@@ -19,10 +19,10 @@ public class BOJ_11053_가장긴증가하는부분수열 {
             num[i] = sc.nextInt();
         }
 
-        System.out.println(sovle(n));
+        System.out.println(solve(n));
     }
 
-    private static int sovle(int n) {
+    private static int solve(int n) {
         if(n==1)
             return 1;
 
