@@ -32,6 +32,8 @@ public class PGMS_단어변환_second {
 
         //return min;
     }
+
+    //BFS
     private int bfs(String begin){
         Queue<String> q = new LinkedList<>();
         q.offer(begin);
@@ -60,6 +62,7 @@ public class PGMS_단어변환_second {
         return 0;
     }
 
+    //DFS
     private void dfs(String str, int cnt) {
         if(str.equals(target)){
             min = Math.min(min, cnt);
@@ -76,6 +79,7 @@ public class PGMS_단어변환_second {
 
     }
 
+    //변환 가능성을 판별하는 메소드
     private boolean isPossible(String str1, String str2){
         int cnt = 0;
         for(int i=0;i<str1.length();i++){
