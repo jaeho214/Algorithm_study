@@ -5,6 +5,14 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class PGMS_라면공장_second {
+
+    public static void main(String[] args) {
+        int[] dates = {4,10,15};
+        int[] supplies = {20, 5, 10};
+        PGMS_라면공장_second pgms_라면공장_second = new PGMS_라면공장_second();
+        System.out.println(pgms_라면공장_second.solution(4, dates, supplies, 30));
+    }
+
     public int solution(int stock, int[] dates, int[] supplies, int k) {
         int answer = 0;
 
@@ -29,4 +37,5 @@ public class PGMS_라면공장_second {
 
         return answer;
     }
+
 }
