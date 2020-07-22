@@ -51,6 +51,7 @@ public class BOJ_2098_외판원순회 {
                 continue;
             }
             // 현재 도시(current)에서 방문한 도시들(visited) 일때 도시 전체를 순회한 최소 비용.
+            // 현재도시에서 이동할 수 있는 다음 도시들 중에 가장 적은 비용이 드는 도시로 이동
             dp[current][visited] = Math.min(dp[current][visited], solution(k, visited | next) + array[current][k]);
         }
         return dp[current][visited];
