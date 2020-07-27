@@ -17,35 +17,34 @@ public class Level3_디스크컨트롤러 {
             return 1;
         });
 
-        PriorityQueue<int[]> queue = new PriorityQueue<>((o1, o2) -> {
+        PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> {
             if (o1[1] < o2[1]) {
                 return -1;
             }
             return 1;
         });
 
-        int time = 0;
-        int index = 0;
-        float answer = 0;
+        int time = 0, index = 0, answer = 0;
 
         while(true){
             while(index < jobs.length && jobs[index][0] <= time){
-                queue.offer(jobs[index]);
+                pq.offer(jobs[index]);
                 index ++;
             }
-            if(queue.size() == 0){
+            if(pq.isEmpty()){
                 time = jobs[index][0];
                 continue;
             }
-            int[] job = queue.poll();
+
+            int[] job = pq.poll();
             time += job[1];
             answer += time - job[0];
-            if(index == jobs.length && queue.size() == 0){
+
+            if(index == jobs.length && pq.size() == 0){
                 break;
             }
         }
 
-        answer /= jobs.length;
-        return (int)answer;
+        return answer/jobs.length;
     }
 }
