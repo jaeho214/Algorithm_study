@@ -31,15 +31,14 @@ public class Leetcode_1712_Ways_to_Split_Array_Into_Three_Subarrays {
             //left 값이 중간값을 지나쳐버리면 브레이크
             if(target < left) break;
 
-            //mid의 합이 left보다 커질때까지 j++
+            //left의 합이 mid보다 커지면 종료
             while(j<=i || j < nums.length-1 && sums[j+1]-sums[i+1] < left){ j ++;}
 
-            //mid의 합이 right의 합보다 작은 동안에
-            //mid의 합을 최대로 만들고 right는 그것보단 클때까지만
+            //mid의 합이 right의 합보다 커지면 종료
             while(k<j || k < nums.length-1 && sums[k+1] - sums[i+1] <= sums[nums.length] - sums[k+1]){ k++;}
 
-            //바로 위 반복문에서 j~k는 가능하더라도 최대한 오른쪽으로 당겼다.
-            //그러므로 j~k 사이에 있는 수만큼은 가능하다는 소리다.
+            //j에서 k로 가는동안에 mid의 값이 right보다 작았음에도 k를 계속 카운트했다
+            //그렇기 때문에 그 사이의 값들도 부분 배열로 가능하다는 이야기
             answer = (answer + k - j) % MOD;
         }
 
