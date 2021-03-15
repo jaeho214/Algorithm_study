@@ -2,9 +2,9 @@ package leetCode;
 
 import java.util.*;
 
-public class Leetcode_1202_Smallest_String_With_Swaps {
+public class Leetcode_1202_Smallest_String_With_Swaps_UNIONFIND {
     public static void main(String[] args) {
-        Leetcode_1202_Smallest_String_With_Swaps smallest_string_with_swaps = new Leetcode_1202_Smallest_String_With_Swaps();
+        Leetcode_1202_Smallest_String_With_Swaps_UNIONFIND smallest_string_with_swaps = new Leetcode_1202_Smallest_String_With_Swaps_UNIONFIND();
         List<List<Integer>> pairs =new ArrayList<>();
         List<Integer> list1 = Arrays.asList(0, 3);
         List<Integer> list2 = Arrays.asList(1, 2);
