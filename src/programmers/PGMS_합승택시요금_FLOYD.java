@@ -23,9 +23,11 @@ public class PGMS_합승택시요금_FLOYD {
             dp[fare[1]][fare[0]] = fare[2];
         }
 
+        //k는 중간지점
         for(int k=1;k<=n;k++){
             for(int i=1;i<=n;i++){
                 for(int j=1;j<=n;j++){
+                    //k를 중간지점으로 하고 거치는 방법과 거치지 않는 방법 비교 후 최소값 갱신
                     dp[i][j] = Math.min(dp[i][k] + dp[k][j], dp[i][j]);
                 }
             }
@@ -35,6 +37,7 @@ public class PGMS_합승택시요금_FLOYD {
         for(int i=1;i<=n;i++){
             if(s == i)
                 continue;
+            //접점을 돌면서 최소값 찾기
             answer = Math.min(answer, Math.min(dp[s][i] + dp[i][a] + dp[i][b], dp[s][a] + dp[s][b]));
         }
 
